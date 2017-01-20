@@ -2,21 +2,44 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+
+    <img src="img/d.png" id="d"/>
+    <img src="img/r.png" id="r"/>
+    <img src="img/i.png" id="i"/>
+    <img src="img/v.png" id="v"/>
+    <img src="img/y.png" id="y"/>
+
+
+
+      <div id="wrap_form">
+
+        <img id="anim" src="img/carre.png"/>
+            <label>Model :</label>
+            <input class="model" type="text" placeholder="Car model"/>
+            <label>Price per day :</label>
+            <input class="price-by-day" type="number" placeholder="Price by day"/>
+            <label>Price per km :</label>
+            <input class="price-by-km" type="number" placeholder="Price by km"/>
+            <label>Pick up date :</label>
+            <input class="begin" type="date" placeholder="Rental begin date"/>
+            <label>Return date :</label>
+            <input class="end" type="date" placeholder="Rental end date"/>
+            <label>Distance :</label>
+            <input class="distance" type="number" placeholder="Distance in km"/>
+            <label id ="checkbox_label">
+            <input class="option" type="checkbox" placeholder="Deductible option"/>
+            Deductible option
+            </label>
+
+          <button id="compute">Compute</button>
+      </div>
+
+      <div id="actors">
+      </div>
+
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
@@ -29,5 +52,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+
   </body>
 </html>
